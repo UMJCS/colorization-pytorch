@@ -274,7 +274,7 @@ def crop_mult(data,mult=16,HWmax=[800,1200]):
     h = (H-Hnew)/2
     w = (W-Wnew)/2
 
-    return data[:,:,h:h+Hnew,w:w+Wnew]
+    return data[:,:,int(h):int(h)+Hnew,int(w):int(w)+Wnew]
 
 def encode_ab_ind(data_ab, opt):
     # Encode ab value into an index
